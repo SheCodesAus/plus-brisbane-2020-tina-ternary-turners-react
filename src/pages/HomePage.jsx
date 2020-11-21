@@ -1,5 +1,7 @@
 import React from "react";
+
 function HomePage() {
-  return <h1>This is the home page - it really is.</h1>;
+  return <h1>Welcome to Income Splitters.</h1>;
 }
+
 export default HomePage;
