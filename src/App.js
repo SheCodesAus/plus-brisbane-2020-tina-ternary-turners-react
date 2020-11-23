@@ -1,11 +1,11 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from
-"react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Nav from "./components/Nav";
 import Home from "./pages/HomePage";
 import About from "./pages/AboutPage";
 import Contact from "./pages/ContactPage";
+import Header from "./Header/Header";
 import LoginPage from "./pages/LoginPage";
 import NewBucketPage from "./pages/NewBucketPage";
 import AllBucketPage from "./pages/AllBucketPage";
@@ -31,6 +31,9 @@ function App() {
   }
   return (
   <Router>
+      <Route path="/">
+        <Header />
+      </Route>
     <div>
     <Nav />
       <Switch>
