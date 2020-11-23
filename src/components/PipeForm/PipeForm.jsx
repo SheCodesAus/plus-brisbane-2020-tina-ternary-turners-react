@@ -2,35 +2,27 @@ import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { useParams } from "react-router-dom";
 
-function PipeForm({ projectId}) {
-    // const project_id= Number(projectId);
+function PipeForm({ bucketId}) {
+    // const project_id= Number(bucketId);
     const user_id = window.localStorage.getItem("user_id");
-    const savedtoken = window.localStorage.getItem("token")
-    // console.log(projectId);
-    const { id } = useParams();
+    const savedtoken = window.localStorage.getItem("token");
+    // console.log(bucketId);
+    const {id} = useParams();
     const [NewpipeData,setPipeList] = useState({
         pipe_name: "",
         dest_bsb_number: 0,
         dest_account_number: 0,
         dest_account_name: "",
         dest_balance: 0,
-        amount_dollar: 0,
-        amount_percen: 0,
+        amount_dollar: -1,
+        amount_percent: -1,
         statement_text: "",
         destination_id: user_id,
         bucket_id: id
         });
-    
+    // console.log(id)
     const history = useHistory();
 
-
-    const handleToggle = (e) => {
-        const { id, checked } = e.target
-        setPipeList((newPipe) => ({
-          ...newPipe,
-          [id]: checked,
-        }))
-      }
 
     const handleChange = (e) => {
         const { id, value } = e.target
@@ -41,8 +33,9 @@ function PipeForm({ projectId}) {
       }
 
     const postData = async () => {
+
     const response = await 
-    fetch(`${process.env.REACT_APP_API_URL}/pipes/`,
+    fetch(`${process.env.REACT_APP_API_URL}pipes/`,
     {
     method: "post",
     headers: {
@@ -57,7 +50,20 @@ function PipeForm({ projectId}) {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (NewpipeData.amount && NewpipeData.comment) {
+        if (NewpipeData.pipe_name && NewpipeData.dest_bsb_number) {
+        var selection = document.getElementById("type") 
+        var amount =document.getElementById("amount")
+        if (selection.value == "dollar"){
+
+                NewpipeData.amount_dollar= amount.valueAsNumber;
+                NewpipeData.amount_percent= -1;
+        }
+        else
+        {
+            NewpipeData.amount_dollar= -1;
+            NewpipeData.amount_percent= amount.valueAsNumber;
+        }
+        console.log(NewpipeData);
             postData().then((response) => {
         // window.localStorage.setItem("token", response.token);
             console.log(response);
@@ -93,14 +99,17 @@ function PipeForm({ projectId}) {
             </div>
 
             <div class="form-item">
-                <label htmlFor="amount_dollar">amount in dollar:</label>
-                <input type="number" id="amount_dollar" placeholder="4" onChange={handleChange}/>
+                <label htmlFor="amount">amount in dollar:</label>
+                <input type="number" id="amount" placeholder="4"/>
             </div>
 
             <div class="form-item">
-                <label htmlFor="amount_percent">amount in percent:</label>
-                <input type="number" id="amount_percent" placeholder="5" onChange={handleChange}/>
-            </div>
+                <label for="type">Choose dollor or Percent:</label>
+                <select id="type" name="type">
+                    <option value="dollar">dollar</option>
+                    <option value="percent">percent</option>
+                </select>
+            </div>	
 
             <div class="form-item">
                 <label htmlFor="statement_text ">Statement Text:</label>

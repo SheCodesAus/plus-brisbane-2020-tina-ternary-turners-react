@@ -93,13 +93,13 @@ return (
             <ul>
                 <li><Link to={`/edit-bucket/${bucketData.id}`}>Edit</Link></li>
                 <li><Link type="submit" onClick={handledelete}>Delete</Link></li>
-                <li><Link to={`/new-pipe/${bucketData.id}`}>Add Pipes</Link></li>
+                {/* <li><Link to={`/new-pipe/${bucketData.id}`}>Add Pipes</Link></li> */}
                 
             </ul>
         </nav>
 
         <div>
-            
+        <PipePage  bucketId={bucketData.id}/>
         </div>
 
         <hr/>
