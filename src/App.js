@@ -12,6 +12,8 @@ import AllBucketPage from "./pages/AllBucketPage";
 import BucketPage from "./pages/BucketPage";
 import EditBucketPage from "./pages/EditBucketPage";
 import PipePage from "./pages/PipePage";
+import Register from "./pages/RegisterPage";
+
 
 function App() {
   const convertDateTime = (isoDate) => {
@@ -64,6 +66,10 @@ function App() {
         <Route path="/all-buckets" >
           <AllBucketPage convertDateTime={convertDateTime}/>
         </Route>
+
+        <Route path="/register">
+          <Register />
+        </Route>  
 
         <Route path="/login">
           <LoginPage />
