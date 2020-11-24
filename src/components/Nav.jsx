@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react"
 import { Link, useHistory, useLocation } from "react-router-dom"
 import NavUser from "./NavUser/NavUser";
 
+import './nav.css';
+
 function Nav() {
     const [loggedIn, setLoggedIn] = useState(false)
   
@@ -23,7 +25,7 @@ function Nav() {
     } 
     else {
       return (
-        <nav className="main-navigation">
+        <nav className="home-navigation">
             <ul>
                 <li><Link to="/about">About</Link></li>
                 <li><Link to="/login">Log In</Link></li>

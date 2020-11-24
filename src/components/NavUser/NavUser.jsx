@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 
 function NavUser({ logOut }) {
   return (
-    <nav className="main-navigation">
+    <nav className="user-navigation">
         <uL>
             <li><Link to="/profile">Profile</Link></li>
             <li><Link to="/all-buckets"> Buckets</Link></li>
