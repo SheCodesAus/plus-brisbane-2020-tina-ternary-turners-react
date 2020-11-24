@@ -44,6 +44,8 @@ function AboutPage() {
         each time you are paid.
       </p>
       <Link to={`register/`}>Get Started</Link>
+
+      <h2>Want to know more? <Link to={`contact/`}>Contact us</Link></h2>
     </div>
   );
 };
