@@ -10,7 +10,7 @@ function AboutPage() {
       </p>
       <p>
         Join Income Splitter today and say goodbye to money headaches. Income
-        Splitter allows you to put your income into ‘buckets’ each time you’re
+        Splitter allows you to put your income into 'pipes' each time you’re
         paid, making sure you have enough to pay your bills - and enjoy your
         lifestyle.
       </p>
@@ -24,21 +24,25 @@ function AboutPage() {
 
       <h2>Step 1</h2>
       <p>
-        Start by working out where your money needs to go each month – things
-        like bills, savings and fun stuff. These will be your buckets.​{" "}
+        Link your main bank account to your 'bucket' in Income Splitter. 
+        This will display your current bank balance in the app. 
       </p>
 
       <h2>Step 2</h2>
       <p>
         {" "}
-        Decide how much of your money goes into each bucket, each time you are
-        paid.
+        Link 'pipes' to your bucket. This is where your money needs to go
+         – things like bills, savings and fun stuff. 
       </p>
 
       <h2>Step 3</h2>
-      <p> Set up your buckets in Income Splitter and you’re good to go! </p>
+      <p> 
+        {" "}
+        Decide how much of your money goes into each pipe, 
+        each time you are paid.
+      </p>
       <h1>Get Started (Register button to go here)</h1>
     </div>
   );
-}
+};
 export default AboutPage;
