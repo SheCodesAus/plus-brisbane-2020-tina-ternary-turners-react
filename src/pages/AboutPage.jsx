@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 function AboutPage() {
   return (
     <div id="info">
@@ -41,7 +43,7 @@ function AboutPage() {
         Decide how much of your money goes into each pipe, 
         each time you are paid.
       </p>
-      <h1>Get Started (Register button to go here)</h1>
+      <Link to={`register/`}>Get Started</Link>
     </div>
   );
 };
