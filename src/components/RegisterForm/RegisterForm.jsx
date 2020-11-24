@@ -6,6 +6,7 @@ function RegisterForm() {
     const [newUser, setNewUser] = useState({
         first_name: "",
         last_name: "",
+        username: "",
         email: "",
         password: "",
     });
@@ -59,6 +60,15 @@ function RegisterForm() {
                 type="text"
                 id="last_name"
                 placeholder="Last name"
+                onChange={handleChange}
+                />
+            </div>
+            <div>
+                <label htmlFor="username">Username: </label>
+                <input
+                type="text"
+                id="username"
+                placeholder="Username"
                 onChange={handleChange}
                 />
             </div>
