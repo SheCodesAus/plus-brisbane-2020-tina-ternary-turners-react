@@ -44,8 +44,7 @@ function RegisterForm() {
 
     return (
         <form>
-            <h1>Register</h1>
-            <div>
+            <div class="form-item">
                 <label htmlFor="first_name">First name: </label>
                 <input
                 type="text"
@@ -54,7 +53,7 @@ function RegisterForm() {
                 onChange={handleChange}
                 />
             </div>
-            <div>
+            <div class="form-item">
                 <label htmlFor="last_name">Last name: </label>
                 <input
                 type="text"
@@ -63,7 +62,7 @@ function RegisterForm() {
                 onChange={handleChange}
                 />
             </div>
-            <div>
+            <div class="form-item">
                 <label htmlFor="username">Username: </label>
                 <input
                 type="text"
@@ -72,7 +71,7 @@ function RegisterForm() {
                 onChange={handleChange}
                 />
             </div>
-            <div>
+            <div class="form-item">
                 <label htmlFor="email">Email: </label>
                 <input
                 type="text"
@@ -81,7 +80,7 @@ function RegisterForm() {
                 onChange={handleChange}
                 />
             </div>
-            <div>
+            <div class="form-item">
                 <label htmlFor="password">Password: </label>
                 <input
                 type="password"
@@ -90,9 +89,11 @@ function RegisterForm() {
                 onChange={handleChange}
                 />
             </div>
+            <div class="form-item">
             <button type="submit" onClick={handleSubmit}>
                 Sign up
             </button>
+            </div>
         </form>
     );
 }
