@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Nav from "./components/Nav";
 import Home from "./pages/HomePage";
-import About from "./pages/AboutPage";
+import AboutPage from "./pages/AboutPage";
 import Contact from "./pages/ContactPage";
 import Header from "./Header/Header";
 import LoginPage from "./pages/LoginPage";
@@ -40,7 +40,7 @@ function App() {
     <Nav />
       <Switch>
         <Route path="/about">
-          <About />
+          <AboutPage />
         </Route>
 
         <Route path="/contact">
