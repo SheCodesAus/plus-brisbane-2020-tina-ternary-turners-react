@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { useParams } from "react-router-dom";
+import ErrorNotFound from "../ErrorNotFound/ErrorNotFound";
 
 function EditBucketForm() {
     
@@ -72,12 +73,13 @@ function EditBucketForm() {
             }
             else{
                 console.log(globalerror);
-                alert("You do not have permission to edit this bucket!");
-                history.push( "/");
+                // alert("You do not have permission to edit this bucket!");
+                history.push(`/${ErrorNotFound}`);
             }
             
         });
     }
+
     //template
     return ( 
         <form>
