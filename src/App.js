@@ -13,6 +13,7 @@ import BucketPage from "./pages/BucketPage";
 import EditBucketPage from "./pages/EditBucketPage";
 import PipePage from "./pages/PipePage";
 import Register from "./pages/RegisterPage";
+import EditUserPage from "./pages/EditUserPage";
 
 
 function App() {
@@ -77,6 +78,10 @@ function App() {
 
         <Route path="/new-bucket" >
           <NewBucketPage/>
+        </Route>
+
+        <Route path="users/:id">
+          <EditUserPage />
         </Route>
 
         <Route path="/">
