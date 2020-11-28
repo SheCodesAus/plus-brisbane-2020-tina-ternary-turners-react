@@ -17,9 +17,8 @@ function ProfilePage() {
         }, []);
 
     return (
-        <div id="user-list">
+        <div className="bucket-card">
             <UserCard userList={userList} />
-            <h2>Edit Profile <Link to={`/edit-user/${userList.id}`}>Edit</Link></h2>
         </div>
     );
 }

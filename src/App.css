@@ -175,6 +175,7 @@
   
   .form-item button {
     width: 100px;
+    background-color: black;
   }
 
   header {
@@ -281,4 +282,5 @@
 body {
   padding: 20px;
   font-family: sans-serif;
+  background-color: #89B0AE;
 }

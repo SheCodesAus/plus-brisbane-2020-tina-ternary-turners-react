@@ -5,7 +5,7 @@ function UserCard(props) {
     const { userList } = props;
     return (
         <div id="bucket-list">
-            <Link to={`users/${userList.id}`}>
+            <Link to={`edit-user/${userList.id}`}>
             <h3>{userList.first_name} </h3>
             <h3>{userList.last_name} </h3>
             <h3>{userList.email} </h3>
