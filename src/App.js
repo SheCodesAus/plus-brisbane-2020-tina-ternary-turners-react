@@ -14,6 +14,8 @@ import EditBucketPage from "./pages/EditBucketPage";
 import PipePage from "./pages/PipePage";
 import Register from "./pages/RegisterPage";
 import ErrorNotFound from "./components/ErrorNotFound/ErrorNotFound";
+import EditUserPage from "./pages/EditUserPage";
+import ProfilePage from "./pages/ProfilePage";
 
 
 function App() {
@@ -71,6 +73,14 @@ function App() {
         <Route path="/register">
           <Register />
         </Route>  
+
+        <Route path="/edit-user/:id">
+          <EditUserPage />
+        </Route>
+
+        <Route path= "/Profile">
+          <ProfilePage />
+        </Route>
 
         <Route path="/login">
           <LoginPage />
