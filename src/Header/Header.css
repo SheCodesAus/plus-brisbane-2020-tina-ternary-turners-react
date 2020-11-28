@@ -1,0 +1,19 @@
+/* ---------------------------------------------------
+                      LOGO STYLES
+----------------------------------------------------*/
+.logo-header{
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: start;
+  }
+  .logo{
+    border-radius: 50px 20px;
+  }
+  .logo-header img{
+    border: 2px solid  rgb(88, 194, 97);
+    max-width: 200px;
+    min-width: 200px;
+    margin-top: 10px;
+  }

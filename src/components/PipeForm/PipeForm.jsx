@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 
 function PipeForm({ bucketId}) {
     // const project_id= Number(bucketId);
+    const bucket_ID = window.localStorage.getItem("bucket_ID")
     const user_id = window.localStorage.getItem("user_id");
     const savedtoken = window.localStorage.getItem("token");
     // console.log(bucketId);
@@ -18,7 +19,7 @@ function PipeForm({ bucketId}) {
         amount_percent: -1,
         statement_text: "",
         destination_id: user_id,
-        bucket_id: id
+        bucket_id: bucket_ID
         });
     // console.log(id)
     const history = useHistory();
@@ -66,6 +67,7 @@ function PipeForm({ bucketId}) {
         console.log(NewpipeData);
             postData().then((response) => {
         // window.localStorage.setItem("token", response.token);
+        window.localStorage.setItem("bucket_ID", null)
             console.log(response);
             history.push("/");
         });
