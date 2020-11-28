@@ -36,6 +36,7 @@ function BucketPage({convertDateTime}) {
         });
         return response.text();
     };
+    window.localStorage.setItem("bucket_ID", bucketData.id)
     const handledelete = (e) => {
         
         e.preventDefault();
@@ -55,42 +56,60 @@ function BucketPage({convertDateTime}) {
         // }
         
     }
+    function piechart(pipes){
+        var i;
+        var stlyeString = {}
+        var str1 = "--gen"
+        stlyeString[str1.concat(0)] = 0
+        var str2 = ""
+        for (i = 0; i < pipes.length; i++) {
+            str2= pipes[i]["amount_percent"] + "%";
+            
+            stlyeString[str1.concat(i)] = str2;
 
+        }
+        // var stlyeString = {"--gen0": "10%","--gen1": "60%","--gen2": "30%"}
+        return(stlyeString);
+    }
+    function chartLabel(inx){
+        var i;
+        var str1 = "percent color";
+        str1=str1+inx;
+        return(str1);
+    }
 
 return (
     <div className="bucket-card">
-        <h2>{bucketData.title}</h2>
-        <h3>This bucket has been created at: {convertDateTime(bucketData.date_created)}</h3>
-        <h3>BSB number: </h3>
-        <h4>{bucketData.source_bsb_number}</h4>
-        <h3>Account number: </h3>
-        <h4>{bucketData.source_account_number }</h4>
-        <h3>Account name: </h3>
-        <h4>{bucketData.source_account_name }</h4>
-        <h3>Balace: </h3>
-        <h4>{bucketData.source_balance}</h4>
-        <h3>Bucket Status is {(bucketData.is_open)?("Open"):("Closed")}</h3>
-        
-        
+        <aside class="sidebar-left">
+            <h2>{bucketData.title}</h2>
+            <h3>This bucket has been created at: {convertDateTime(bucketData.date_created)}</h3>
+            <h3>BSB number:{bucketData.source_bsb_number} </h3>
+            <h3>Account number:{bucketData.source_account_number }</h3>
+            <h3>Account name: {bucketData.source_account_name }</h3>
+            <h3>Balace: {bucketData.source_balance}</h3>
+            <h3>Bucket Status is {(bucketData.is_open)?("Open"):("Closed")}</h3>
+        </aside>
 
-        <hr/>
-
-        <h3>Pipes:</h3>
-        <h1>This bucket has been split to </h1>
-        <ul>
+        <aside class="sidebar-right">
+            <div class="chart" style={piechart(bucketData.pipes)}></div>
+            <h2>This bucket has been split to </h2>
+            <ul class="key">
             {bucketData.pipes.map((pipeData, key) => {
                 
-            return (
-            <li>
-                <PipeCard  pipeData={pipeData}/>
-            </li>
-            );
-            })}
-        </ul>
+                return (
+                    <li>
+                        <strong class= {chartLabel(key)}>{pipeData.amount_percent}%</strong>
+                        {/* <strong class="percent color0">{pipeData.amount_percent}%</strong> */}
+                        <span class="choice">This pipe has been created for {pipeData.pipe_name}</span>
+                    </li>
+                );
+                })}
 
-
+            </ul>
+        </aside>
+        
         <nav class="main-navigation">
-            <ul>
+            <ul >
                 <li><Link to={`/edit-bucket/${bucketData.id}`}>Edit</Link></li>
                 <li><Link type="submit" onClick={handledelete}>Delete</Link></li>
                 <li><Link to={`/new-pipe/${bucketData.id}`}>Add Pipes</Link></li>
@@ -99,13 +118,9 @@ return (
         </nav>
 
         <div>
-            
+        {/* <PipePage  bucketId={bucketData.id}/> */}
         </div>
-
-        <hr/>
-
-
-        
+   
     </div>
     );
 }

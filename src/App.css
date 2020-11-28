@@ -1,41 +1,4 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
 #bucket-list {
   display: grid;
@@ -231,3 +194,109 @@
   .form-item button {
     width: 100px;
   }
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #000;
+}
+
+  /* ---------------------------------------------------
+                        Chart Styles
+  ----------------------------------------------------*/
+  .sidebar-left {
+    float: left;
+    width: 40%;
+  }
+  .sidebar-right {
+    float: right;
+    width: 40%;
+  }
+  .chart {
+    background: 
+      conic-gradient(#F15854 var(--gen0, 0%), 
+        #4D4D4D 0 calc(var(--gen0, 0%) + var(--gen1, 0%)), 
+        #5DA5DA 0 calc(var(--gen0, 0%) + var(--gen1, 0%) + var(--gen2, 0%)),
+        #DECF3F 0 calc(var(--gen0, 0%) + var(--gen1, 0%) + var(--gen2, 0%) + var(--gen3, 0%)),
+        #B276B2 0 calc(var(--gen0, 0%) + var(--gen1, 0%) + var(--gen2, 0%) + var(--gen3, 0%) + var(--gen4, 0%)),
+        #FAA43A 0
+      );
+    border-radius: 50%;
+    width: 50%;
+    height: 0;
+    padding-top: 50%;
+    float: left;
+    padding-right: 20px;
+  }
+  
+.key {
+  text-align: left;
+  width: 50%;
+  float: right;
+  list-style: none;
+  display: table;
+  border-collapse: separate;
+}
+  .key > li {
+    display: table-row;
+    padding-top: 2px;
+  }
+  .key > li > * {
+    display: table-cell;
+    border-bottom: 12px solid #fff;
+  }
+
+.percent {
+  color: white;
+  padding: 10px 2px;
+  text-shadow: 0 0 1px black;
+  text-align: center;
+}
+.choice {
+  padding-left: 10px;
+}
+
+.color0 {
+  background: #F15854;
+}
+.color1 {
+  background: #4D4D4D;
+}
+.color2 {
+  background: #5DA5DA;
+}
+.color3 {
+  background: #DECF3F;
+}
+.color4 {
+  background: #B276B2;
+}
+.color5 {
+  background: #FAA43A;
+}
+.color6 {
+  background: #87fa3a;
+}
+.color7 {
+  background: #581403;
+}
+.color8 {
+  background: #0a5c18;
+}
+.color9 {
+  background: #f8f404;
+}
+.color10 {
+  background: #f85104;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 20px;
+  font-family: sans-serif;
+}
