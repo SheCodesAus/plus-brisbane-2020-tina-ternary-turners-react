@@ -13,6 +13,7 @@ import BucketPage from "./pages/BucketPage";
 import EditBucketPage from "./pages/EditBucketPage";
 import PipePage from "./pages/PipePage";
 import Register from "./pages/RegisterPage";
+import ErrorNotFound from "./components/ErrorNotFound/ErrorNotFound";
 import EditUserPage from "./pages/EditUserPage";
 import ProfilePage from "./pages/ProfilePage";
 
@@ -89,9 +90,11 @@ function App() {
           <NewBucketPage/>
         </Route>
 
-        <Route path="/">
+        <Route exact path="/">
           <Home />
         </Route>
+
+        <Route path="" component={ErrorNotFound} />
         
       </Switch>
     </div>
