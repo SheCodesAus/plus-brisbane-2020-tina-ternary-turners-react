@@ -120,6 +120,9 @@ return (
                 </li>
             </ul>
         </aside>
+        {bucketData.pipes.map((pipeData, key) => {
+                return (<p><PipeCard  pipeData={pipeData}/></p>);
+        })}
         
         <nav class="main-navigation">
             <ul >
