@@ -14,6 +14,7 @@ import EditBucketPage from "./pages/EditBucketPage";
 import PipePage from "./pages/PipePage";
 import Register from "./pages/RegisterPage";
 import EditUserPage from "./pages/EditUserPage";
+import ProfilePage from "./pages/ProfilePage";
 
 
 function App() {
@@ -72,16 +73,20 @@ function App() {
           <Register />
         </Route>  
 
+        <Route path="/edit-user/:id">
+          <EditUserPage />
+        </Route>
+
+        <Route path= "/Profile">
+          <ProfilePage />
+        </Route>
+
         <Route path="/login">
           <LoginPage />
         </Route>  
 
         <Route path="/new-bucket" >
           <NewBucketPage/>
-        </Route>
-
-        <Route path="users/:id">
-          <EditUserPage />
         </Route>
 
         <Route path="/">

@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import UserCard from "../components/UserCard/UserCard";
 import "../App.css"
+
 function UserPage({}) {
     const [userList, setUserList] = useState([]);
     useEffect(() => {
-        fetch(`${process.env.REACT_APP_API_URL}users/${id}`)
+        fetch(`${process.env.REACT_APP_API_URL}users/`)
         .then((results) => {
         return results.json();
         })
@@ -14,7 +15,7 @@ function UserPage({}) {
         }, []);
 
 return (
-    <div id="user-list">
+    <div>
         {userList.map((userData, key) => {
         return <UserCard key={key} userData={userData} />;
         })}
