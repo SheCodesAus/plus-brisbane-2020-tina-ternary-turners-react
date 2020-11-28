@@ -50,7 +50,7 @@ function App() {
           <Contact />
         </Route>
 
-        <Route path="/new-pipe">
+        <Route path="/new-pipe/:id">
           <PipePage />
         </Route>
 
