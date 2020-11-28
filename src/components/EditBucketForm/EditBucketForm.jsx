@@ -89,8 +89,9 @@ function EditBucketForm() {
         </div>
 
         <div class="form-item">
-            <label htmlFor="is_open">Do want to change bucket status?</label>
+            <label htmlFor="is_open" class="Boxcontainer">Do you want to change bucket status?
             <input type="checkbox" id="is_open" checked={bucketDetails.is_open} onChange={handleToggle}/>
+            <span class="checkmark"></span></label>
         </div>
 
         <div class="form-item">

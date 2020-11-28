@@ -62,8 +62,9 @@ function NewBucketForm() {
             </div>
 
             <div class="form-item">
-                <label htmlFor="is_open">Bucket is open?:</label>
+                <label htmlFor="is_open" class="Boxcontainer">Bucket is open?
                 <input type="checkbox" id="is_open" value="true" onChange={handleToggle}/>
+                <span class="checkmark"></span></label>
             </div>
 
             <div class="form-item">
