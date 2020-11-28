@@ -7,6 +7,7 @@ function PipeForm({ bucketId}) {
     const bucket_ID = window.localStorage.getItem("bucket_ID")
     const user_id = window.localStorage.getItem("user_id");
     const savedtoken = window.localStorage.getItem("token");
+    const bucket_remaining = window.localStorage.getItem("bucket_remaining");
     // console.log(bucketId);
     const {id} = useParams();
     const [NewpipeData,setPipeList] = useState({
@@ -68,6 +69,7 @@ function PipeForm({ bucketId}) {
             postData().then((response) => {
         // window.localStorage.setItem("token", response.token);
         window.localStorage.setItem("bucket_ID", null)
+        window.localStorage.setItem("bucket_remaining", null)
             console.log(response);
             history.push("/");
         });
@@ -75,6 +77,9 @@ function PipeForm({ bucketId}) {
         };
     return (
         <form>
+            <div class="form-item">
+                <h3> You have had just {bucket_remaining}$ remained in your bucket</h3>
+            </div>
             <div class="form-item">
                 <label htmlFor="pipe_name">Pipe Name:</label>
                 <input type="text" id="pipe_name" placeholder="Piepe Name?" onChange={handleChange}/>
@@ -101,7 +106,7 @@ function PipeForm({ bucketId}) {
             </div>
 
             <div class="form-item">
-                <label htmlFor="amount">amount in dollar:</label>
+                <label htmlFor="amount">Amount Value:</label>
                 <input type="number" id="amount" placeholder="4"/>
             </div>
 

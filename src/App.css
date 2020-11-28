@@ -203,6 +203,12 @@
         #5DA5DA 0 calc(var(--gen0, 0%) + var(--gen1, 0%) + var(--gen2, 0%)),
         #DECF3F 0 calc(var(--gen0, 0%) + var(--gen1, 0%) + var(--gen2, 0%) + var(--gen3, 0%)),
         #B276B2 0 calc(var(--gen0, 0%) + var(--gen1, 0%) + var(--gen2, 0%) + var(--gen3, 0%) + var(--gen4, 0%)),
+        #644c2f 0 calc(var(--gen0, 0%) + var(--gen1, 0%) + var(--gen2, 0%) + var(--gen3, 0%) + var(--gen4, 0%) + var(--gen5, 0%)),
+        #87fa3a 0 calc(var(--gen0, 0%) + var(--gen1, 0%) + var(--gen2, 0%) + var(--gen3, 0%) + var(--gen4, 0%) + var(--gen5, 0%) + var(--gen6, 0%)),
+        #581403 0 calc(var(--gen0, 0%) + var(--gen1, 0%) + var(--gen2, 0%) + var(--gen3, 0%) + var(--gen4, 0%) + var(--gen5, 0%) + var(--gen6, 0%) + var(--gen7, 0%)),
+        #0a5c18 0 calc(var(--gen0, 0%) + var(--gen1, 0%) + var(--gen2, 0%) + var(--gen3, 0%) + var(--gen4, 0%) + var(--gen5, 0%) + var(--gen6, 0%) + var(--gen7, 0%) + var(--gen8, 0%)),
+        #f8f404 0 calc(var(--gen0, 0%) + var(--gen1, 0%) + var(--gen2, 0%) + var(--gen3, 0%) + var(--gen4, 0%) + var(--gen5, 0%) + var(--gen6, 0%) + var(--gen7, 0%) + var(--gen8, 0%) + var(--gen9, 0%)),
+        #f85104 0 calc(var(--gen0, 0%) + var(--gen1, 0%) + var(--gen2, 0%) + var(--gen3, 0%) + var(--gen4, 0%) + var(--gen5, 0%) + var(--gen6, 0%) + var(--gen7, 0%) + var(--gen8, 0%) + var(--gen9, 0%) + var(--gen10, 0%)),
         #FAA43A 0
       );
     border-radius: 50%;
@@ -239,7 +245,9 @@
 .choice {
   padding-left: 10px;
 }
-
+.color00{
+  background: #FAA43A;
+}
 .color0 {
   background: #F15854;
 }
@@ -256,7 +264,7 @@
   background: #B276B2;
 }
 .color5 {
-  background: #FAA43A;
+  background: #644c2f;
 }
 .color6 {
   background: #87fa3a;

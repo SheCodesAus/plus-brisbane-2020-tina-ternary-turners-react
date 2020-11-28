@@ -56,15 +56,15 @@ function BucketPage({convertDateTime}) {
         // }
         
     }
-    function piechart(pipes){
+    function piechart(bucketData){
         var i;
         var stlyeString = {}
         var str1 = "--gen"
         stlyeString[str1.concat(0)] = 0
         var str2 = ""
-        for (i = 0; i < pipes.length; i++) {
-            str2= pipes[i]["amount_percent"] + "%";
-            
+        for (i = 0; i < bucketData.pipes.length; i++) {
+            // str2= pipes[i]["amount_percent"] + "%";
+            str2=(bucketData.pipes[i]["amount_percent"]==-1)?(bucketData.pipes[i]["amount_dollar"]*100/bucketData["source_balance"])+"%":(bucketData.pipes[i]["amount_percent"])+ "%";
             stlyeString[str1.concat(i)] = str2;
 
         }
@@ -77,7 +77,17 @@ function BucketPage({convertDateTime}) {
         str1=str1+inx;
         return(str1);
     }
-
+    function calculate_remaining(bucketData){
+        var i;
+        var accum_percent = 0;
+        for (i = 0; i < bucketData.pipes.length; i++) {
+            bucketData.pipes[i]["amount_percent"] = (bucketData.pipes[i]["amount_percent"]==-1)?(bucketData.pipes[i]["amount_dollar"]*100/bucketData["source_balance"]):(bucketData.pipes[i]["amount_percent"]);
+            var accum_percent = accum_percent + bucketData.pipes[i]["amount_percent"];    
+        }
+        var remaining = 100*(bucketData["source_balance"] * (1-(accum_percent/100)) )/ bucketData["source_balance"];
+        return(remaining.toFixed(0));
+    }
+    window.localStorage.setItem("bucket_remaining", (calculate_remaining(bucketData)/100)*bucketData["source_balance"]);
 return (
     <div className="bucket-card">
         <aside class="sidebar-left">
@@ -91,20 +101,23 @@ return (
         </aside>
 
         <aside class="sidebar-right">
-            <div class="chart" style={piechart(bucketData.pipes)}></div>
+            <div class="chart" style={piechart(bucketData)}></div>
             <h2>This bucket has been split to </h2>
             <ul class="key">
             {bucketData.pipes.map((pipeData, key) => {
                 
                 return (
                     <li>
-                        <strong class= {chartLabel(key)}>{pipeData.amount_percent}%</strong>
+                        <strong class= {chartLabel(key)}>{(pipeData.amount_percent==-1)?(pipeData.amount_dollar*100/bucketData.source_balance):(pipeData.amount_percent)}%</strong>
                         {/* <strong class="percent color0">{pipeData.amount_percent}%</strong> */}
                         <span class="choice">This pipe has been created for {pipeData.pipe_name}</span>
                     </li>
                 );
                 })}
-
+                <li>
+                    <strong class="percent color00">{calculate_remaining(bucketData)}%</strong>
+                    <span class="choice">Bucket's Remaining</span>
+                </li>
             </ul>
         </aside>
         
