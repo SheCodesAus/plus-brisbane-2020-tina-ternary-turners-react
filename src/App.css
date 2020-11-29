@@ -548,3 +548,12 @@ body{
   /* background-position: right top; */
   border-radius: 25px;
 }
+
+
+.pipe-history{
+
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: start;
+}

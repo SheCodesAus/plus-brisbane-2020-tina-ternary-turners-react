@@ -129,6 +129,7 @@ return (
                 <li><Link to={`/edit-bucket/${bucketData.id}`}>Edit</Link></li>
                 <li><Link type="submit" onClick={handledelete}>Delete</Link></li>
                 <li><Link to={`/new-pipe/${bucketData.id}`}>Add Pipes</Link></li>
+                <li><Link to="/pipe-history/">Pipe History</Link></li>
                 
             </ul>
         </nav>
