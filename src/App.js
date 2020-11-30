@@ -16,6 +16,7 @@ import Register from "./pages/RegisterPage";
 import ErrorNotFound from "./components/ErrorNotFound/ErrorNotFound";
 import EditUserPage from "./pages/EditUserPage";
 import ProfilePage from "./pages/ProfilePage";
+import PipeHistory from "./pages/PipeHistory";
 
 
 function App() {
@@ -52,6 +53,10 @@ function App() {
 
         <Route path="/new-pipe/:id">
           <PipePage />
+        </Route>
+
+        <Route path="/pipe-history">
+          <PipeHistory />
         </Route>
 
         <Route path="/delete-bucket/:id">
