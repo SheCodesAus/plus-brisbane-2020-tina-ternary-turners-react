@@ -55,7 +55,12 @@ function NewBucketForm() {
         }
         };
     return (
-        <form>
+        <div>
+            <div class="Bucket_Start">
+                <h1>Create Your Own Bucket</h1>
+            </div>
+
+            <form>
             <div class="form-item">
                 <label htmlFor="title">Bucket title:</label>
                 <input type="text" id="title" placeholder="Enter Bucket title" onChange={handlebucketChange}/>
@@ -91,8 +96,9 @@ function NewBucketForm() {
             <div class="form-item">
                 <button type="submit" onClick={handlebucketSubmit}>Submit</button>
             </div>
-            
-        </form>
+            </form> 
+        </div>
+        
     );
 }
 export default NewBucketForm;

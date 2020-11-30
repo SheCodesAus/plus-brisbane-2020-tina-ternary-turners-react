@@ -99,10 +99,10 @@ return (
             <h3>Balace: {bucketData.source_balance}</h3>
             <h3>Bucket Status is {(bucketData.is_open)?("Open"):("Closed")}</h3>
         </aside>
-
+        <h3>This bucket has been split to </h3>
         <aside class="sidebar-right">
             <div class="chart" style={piechart(bucketData)}></div>
-            <h2>This bucket has been split to </h2>
+            
             <ul class="key">
             {bucketData.pipes.map((pipeData, key) => {
                 

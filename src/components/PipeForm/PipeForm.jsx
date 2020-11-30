@@ -129,7 +129,7 @@ function PipeForm({ bucketId}) {
                 <span></span>
                 <span></span>
                 <span></span>
-                Donate
+                Save
                 </button>
             </div>
         </form>

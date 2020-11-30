@@ -44,6 +44,9 @@ function RegisterForm() {
 
     return (
         <form>
+            <div class="Register1">
+                <h1>Hi</h1>
+            </div>
             <div class="form-item">
                 <label htmlFor="first_name">First name: </label>
                 <input
