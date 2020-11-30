@@ -549,11 +549,13 @@ select {
   /* background-position: right top; */
   border-radius: 25px;
 }
-<<<<<<< Updated upstream
-
-
 .pipe-history{
-=======
+
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: start;
+}
 .Bucket_Start{
   text-align: center;
   color: #fff;
@@ -633,20 +635,16 @@ select {
 /* ---------------------------------------------------
                       Error Page
 ----------------------------------------------------*/
-.error-header{
->>>>>>> Stashed changes
-
+.error-header
+{
   display: flex;
   flex-direction: column;
   text-align: center;
   justify-content: start;
-<<<<<<< Updated upstream
-=======
 }
 
 .error-header img{
   max-width: 100%;
   min-width: 40%;
   margin-top: 10px;
->>>>>>> Stashed changes
 }
