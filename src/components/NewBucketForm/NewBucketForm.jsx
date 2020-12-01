@@ -62,34 +62,34 @@ function NewBucketForm() {
 
             <form>
             <div class="form-item">
-                <label htmlFor="title">Bucket title:</label>
-                <input type="text" id="title" placeholder="Enter Bucket title" onChange={handlebucketChange}/>
+                <label htmlFor="title">Bucket Title:</label>
+                <input type="text" id="title" placeholder="Enter Bucket Title" onChange={handlebucketChange}/>
             </div>
 
             <div class="form-item">
-                <label htmlFor="is_open" class="Boxcontainer">Bucket is open?
+                <label htmlFor="is_open" class="Boxcontainer">Is this bucket is active?
                 <input type="checkbox" id="is_open" value="true" onChange={handleToggle}/>
                 <span class="checkmark"></span></label>
             </div>
 
             <div class="form-item">
-                <label htmlFor="source_bsb_number"> bsb number: </label>
-                <input type="number" id="source_bsb_number" placeholder="111111" onChange={handlebucketChange}/>
+                <label htmlFor="source_bsb_number"> BSB Number: </label>
+                <input type="number" id="source_bsb_number" placeholder="123123" onChange={handlebucketChange}/>
             </div>
 
             <div class="form-item">
-                <label htmlFor="source_account_number">account number?</label>
-                <input type ="number" id="source_account_number" placeholder="111111111" onChange={handlebucketChange} />
+                <label htmlFor="source_account_number">Account Number?</label>
+                <input type ="number" id="source_account_number" placeholder="123456789" onChange={handlebucketChange} />
             </div>
 
             
             <div class="form-item">
-                <label htmlFor="source_account_name"> account name?</label>
-                <input type ="text" id="source_account_name" placeholder="Name" onChange={handlebucketChange}/>
+                <label htmlFor="source_account_name"> Account Name?</label>
+                <input type ="text" id="source_account_name" placeholder="Account Name" onChange={handlebucketChange}/>
             </div>
 
             <div class="form-item">
-                <label htmlFor="source_balance"> balance ?</label>
+                <label htmlFor="source_balance"> Balance?</label>
                 <input type ="number" id="source_balance" placeholder="20000" onChange={handlebucketChange} />
             </div>
 
