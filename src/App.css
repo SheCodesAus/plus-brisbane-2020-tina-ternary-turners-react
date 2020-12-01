@@ -516,10 +516,10 @@ select {
     float: right;
     width: 30%;
   }
-}
-.sidebar {
-  float: right;
-  width: 30%;
+  .sidebar {
+    float: right;
+    width: 30%;
+  }
 }
 @media screen and (min-width: 750px) {
   
