@@ -78,21 +78,21 @@ function PipeForm({ bucketId}) {
     return (
         <form>
             <div class="form-item">
-                <h3> You have had just {bucket_remaining}$ remained in your bucket</h3>
+                <h3> You have ${bucket_remaining} remaining in your bucket</h3>
             </div>
             <div class="form-item">
                 <label htmlFor="pipe_name">Pipe Name:</label>
-                <input type="text" id="pipe_name" placeholder="Piepe Name?" onChange={handleChange}/>
+                <input type="text" id="pipe_name" placeholder="Pipe Name" onChange={handleChange}/>
             </div>
             
             <div class="form-item">
                 <label htmlFor="dest_bsb_number">BSB Number:</label>
-                <input type="number" id="dest_bsb_number" placeholder="111111" onChange={handleChange}/>
+                <input type="number" id="dest_bsb_number" placeholder="123123" onChange={handleChange}/>
             </div>
             
             <div class="form-item">
                 <label htmlFor="dest_account_number">Bank Account Number:</label>
-                <input type="number" id="dest_account_number" placeholder="111111111" onChange={handleChange}/>
+                <input type="number" id="dest_account_number" placeholder="123456789" onChange={handleChange}/>
             </div>
 
             <div class="form-item">
@@ -111,16 +111,16 @@ function PipeForm({ bucketId}) {
             </div>
 
             <div class="form-item">
-                <label for="type">Choose dollor or Percent:</label>
+                <label for="type">Choose Dollar or Percent:</label>
                 <select id="type" name="type">
-                    <option value="dollar">dollar</option>
-                    <option value="percent">percent</option>
+                    <option value="Dollar">dollar</option>
+                    <option value="Percent">percent</option>
                 </select>
             </div>	
 
             <div class="form-item">
                 <label htmlFor="statement_text ">Statement Text:</label>
-                <input type="text" id="statement_text" placeholder="statement_text " onChange={handleChange}/>
+                <input type="text" id="statement_text" placeholder="Description" onChange={handleChange}/>
             </div>
 
             <div class="form-item">
@@ -129,7 +129,7 @@ function PipeForm({ bucketId}) {
                 <span></span>
                 <span></span>
                 <span></span>
-                Donate
+                Transfer
                 </button>
             </div>
         </form>

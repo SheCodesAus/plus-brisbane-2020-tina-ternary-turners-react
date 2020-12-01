@@ -41,7 +41,7 @@ function BucketPage({convertDateTime}) {
         
         e.preventDefault();
 
-        if (window.confirm(`You are about to delete the bucket with title ${bucketData.title}!!!!`)) {
+        if (window.confirm(`You are about to delete the ${bucketData.title} bucket!!`)) {
             deleteData().then(response => {
                 console.log(response)
                 history.push( `/`)
