@@ -118,6 +118,7 @@ h3 {
       min-height: 100px;
       border-top: 1px solid rgb(36,36,36);
       border-bottom: 1px solid rgb(36,36,36);
+      padding-left: 20px;
     } /* media query for 750px  */
     
     .main-navigation ul {
@@ -691,3 +692,33 @@ footer{
   flex-direction: row;
   justify-content: center;
 }
+/* ---------------------------------------------------
+                      Mobile rehope
+----------------------------------------------------*/
+
+@media screen and (max-width: 750px){
+  #bucket-list {
+    display: grid;
+    grid-template-columns: 90%;
+    column-gap: 10px;
+    row-gap: 10px;
+    font-weight: normal;
+    font-family: "Quicksand", serif;
+    box-shadow: 0px 0px 15px gray;
+    border-radius: 0%;
+    text-decoration: none;
+    overflow: hidden;
+    text-align: center;
+  }
+  .bucket-card{
+    box-shadow: 0px 0px 15px gray;
+    border-radius: 5%;
+    text-decoration: none;
+    overflow: hidden;
+    text-align: center;
+  }
+  .bucket-card .main-navigation {
+    margin-right: 10 px;
+    float: right;
+  }
+} /* media query for 750px  */
