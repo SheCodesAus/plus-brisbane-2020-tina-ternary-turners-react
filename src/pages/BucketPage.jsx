@@ -99,10 +99,10 @@ return (
             <h3>Balace: {bucketData.source_balance}</h3>
             <h3>Bucket Status is {(bucketData.is_open)?("Open"):("Closed")}</h3>
         </aside>
-
+        <h3>This bucket has been split to </h3>
         <aside class="sidebar-right">
             <div class="chart" style={piechart(bucketData)}></div>
-            <h2>This bucket has been split to </h2>
+            
             <ul class="key">
             {bucketData.pipes.map((pipeData, key) => {
                 
@@ -110,19 +110,19 @@ return (
                     <li>
                         <strong class= {chartLabel(key)}>{(pipeData.amount_percent==-1)?(pipeData.amount_dollar*100/bucketData.source_balance):(pipeData.amount_percent)}%</strong>
                         {/* <strong class="percent color0">{pipeData.amount_percent}%</strong> */}
-                        <span class="choice">This pipe has been created for {pipeData.pipe_name}</span>
+                        <span class="choice">{pipeData.pipe_name}</span>
                     </li>
                 );
                 })}
                 <li>
                     <strong class="percent color00">{calculate_remaining(bucketData)}%</strong>
-                    <span class="choice">Bucket's Remaining</span>
+                    <span class="choice">Remaining</span>
                 </li>
             </ul>
         </aside>
-        {bucketData.pipes.map((pipeData, key) => {
+        {/* {bucketData.pipes.map((pipeData, key) => {
                 return (<p><PipeCard  pipeData={pipeData}/></p>);
-        })}
+        })} */}
         
         <nav class="main-navigation">
             <ul >

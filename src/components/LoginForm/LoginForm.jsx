@@ -43,7 +43,14 @@ function LoginForm() {
         }
         };
     return (
+        <div>
+        <div class="Register-Form">
+            <h1>Register Now</h1>
+        </div>
         <form>
+            <div class ="LogIn-Form">
+                <h1>Start</h1>
+            </div>
             <div class="form-item">
                 <label htmlFor="username">Username:</label>
                 <input type="text" id="username" placeholder="Enter username" onChange={handleChange}/>
@@ -57,8 +64,8 @@ function LoginForm() {
             <div class="form-item">
                 <button type="submit" onClick={handleSubmit}>Login</button>
             </div>
-            
         </form>
+        </div>
     );
 }
 export default LoginForm;
