@@ -12,9 +12,9 @@ return (
 <h2>
 Income Splitters was proudly made by Elnaz, Rebecca, Nic and Rachael.
 </h2>
-<h3>If you would like to get in touch with us with any feedback, or have a question, please follow the links on our pictures below. 
+<p>If you would like to get in touch with us with any feedback, or have a question, please follow the links on our pictures below. 
 We’d love to hear from you!
-We are contactable via our individual Portfolio pages, where you will also find links to our LinkedIn  accounts</h3>
+We are contactable via our individual Portfolio pages, where you will also find links to our LinkedIn  accounts</p>
         <footer>
 
         <h4>Our Developers:</h4>
