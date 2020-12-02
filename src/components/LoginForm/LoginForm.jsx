@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
+import "./LoginForm.css";
 
 function LoginForm() {
     const [credentials, setCredentials] = useState({
@@ -43,10 +44,7 @@ function LoginForm() {
         }
         };
     return (
-        <div>
-        <div class="Register-Form">
-            <h1>Register Now</h1>
-        </div>
+        <div class="animated fadeInLeft">
         <form>
             <div class ="LogIn-Form">
                 <h1>Start</h1>

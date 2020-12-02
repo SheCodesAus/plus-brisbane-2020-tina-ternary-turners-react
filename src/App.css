@@ -669,20 +669,6 @@ footer{
   }
 
 /* ---------------------------------------------------
-                      CONTACT ICON STYLES
-----------------------------------------------------*/
-.icon-contact img{
-  max-width: 70px;
-  min-width: 10px;
-  margin-top: 10px;
-  margin-right: 70px;
-}
-.icon-contact{
-  display: inline-flex;
-  flex-direction: row;
-  justify-content: center;
-}
-/* ---------------------------------------------------
                       Mobile rehope
 ----------------------------------------------------*/
 
