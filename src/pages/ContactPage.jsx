@@ -60,7 +60,7 @@ We are contactable via our individual Portfolio pages, where you will also find 
                     </div>
                 </div>
             </div>
-            <p>Made by Elnaz & Rebeca & Rachael & Nic</p>
+            <p>Made by Elnaz & Rebecca & Rachael & Nic</p>
         </footer>
     </div>
 );
