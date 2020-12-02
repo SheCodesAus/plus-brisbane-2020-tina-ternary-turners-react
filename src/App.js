@@ -17,6 +17,7 @@ import ErrorNotFound from "./components/ErrorNotFound/ErrorNotFound";
 import EditUserPage from "./pages/EditUserPage";
 import ProfilePage from "./pages/ProfilePage";
 import PipeHistory from "./pages/PipeHistory";
+import EditPipePage from "./pages/EditPipePage";
 
 
 function App() {
@@ -57,6 +58,14 @@ function App() {
 
         <Route path="/pipe-history">
           <PipeHistory />
+        </Route>
+
+        {/* <Route path="/delete-pipe/:id">
+          <EditPipePage />
+        </Route> */}
+
+        <Route path="/edit-pipe/:id" >
+          <EditPipePage convertDateTime={convertDateTime}/>
         </Route>
 
         <Route path="/delete-bucket/:id">
