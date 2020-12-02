@@ -55,7 +55,7 @@ function NewBucketForm() {
         }
         };
     return (
-        <div>
+        <div class="animated fadeInLeft">
             <div class="Bucket_Start">
                 <h1>Create Your Own Bucket</h1>
             </div>

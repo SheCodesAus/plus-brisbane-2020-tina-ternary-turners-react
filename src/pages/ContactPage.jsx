@@ -20,7 +20,7 @@ We are contactable via our individual Portfolio pages, where you will also find 
         <h4>Our Developers:</h4>
    
             <div class="container">
-                <img src={Elnaz} alt="Avatar" class="image" style={{"width":"100%"}}/>
+                <img src={Elnaz} alt="Avatar" class="image" />
                 <div class="middle">
                     <div class = "icon-contact">
                     <a  href="https://www.linkedin.com/in/elnaz-karimpour-49a7a877/"><img src={linkedin}/> </a> 
@@ -32,7 +32,7 @@ We are contactable via our individual Portfolio pages, where you will also find 
             </div>
 
             <div class="container">
-                <img src={Bec} alt="Avatar" class="image" style={{"width":"100%"}}/>
+                <img src={Bec} alt="Avatar" class="image" />
                 <div class="middle">
                     <div class = "icon-contact">
                     <a  href="https://www.linkedin.com/in/rebeccamillwood/"><img src={linkedin}/> </a> 
@@ -44,7 +44,7 @@ We are contactable via our individual Portfolio pages, where you will also find 
             </div>
 
             <div class="container">
-                <img src={Nic} alt="Avatar" class="image" style={{"width":"100%"}}/>
+                <img src={Nic} alt="Avatar" class="image"/>
                 <div class="middle">
                     <div class = "icon-contact">
                     <a  href="https://www.linkedin.com/in/nicolalambie/"><img src={linkedin}/> </a> 
@@ -53,7 +53,7 @@ We are contactable via our individual Portfolio pages, where you will also find 
             </div>
 
             <div class="container">
-                <img src={Rachael} alt="Avatar" class="image" style={{"width":"100%"}}/>
+                <img src={Rachael} alt="Avatar" class="image"/>
                 <div class="middle">
                     <div class = "icon-contact">
                     <a  href="https://www.linkedin.com/in/rachael-dagge-798334133/"><img src={linkedin}/> </a> 

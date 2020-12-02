@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
+import "./RegisterForm.css"
 
 
 function RegisterForm() {
@@ -43,7 +44,7 @@ function RegisterForm() {
     };
 
     return (
-        <form>
+        <form class="animated fadeInLeft">
             <div class="Register1">
                 <h1>Hi</h1>
             </div>
