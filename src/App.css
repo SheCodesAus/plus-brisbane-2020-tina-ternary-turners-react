@@ -667,17 +667,7 @@ footer{
   footer p{
     margin: 0;
   }
-@media screen and (min-width: 1050px){
-  .contact-page footer {
-    padding-top: 300px;
-    float: left;
-    width: 30%; 
-  }
-  .contact-page footer {
-    float: left;
-    width: 100%;
-  }
-}
+
 /* ---------------------------------------------------
                       CONTACT ICON STYLES
 ----------------------------------------------------*/
