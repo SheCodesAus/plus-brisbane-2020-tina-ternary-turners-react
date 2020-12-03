@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { useHistory } from "react-router-dom";
 import "../components/BucketCard/BucketCard.css";
 // import PipePage from "./PipePage"
-// import PipeCard from "../components/PipeCard/PipeCard";
+import PipeCard from "../components/PipeCard/PipeCard";
 // import "../components/EditPipeForm/EditPipeForm";
 
 
@@ -121,16 +121,15 @@ return (
                 </li>
             </ul>
         </aside>
-        {/* {bucketData.pipes.map((pipeData, key) => {
+        {bucketData.pipes.map((pipeData, key) => {
                 return (<p><PipeCard  pipeData={pipeData}/></p>);
-        })} */}
+        })}
         
         <nav class="main-navigation">
             <ul >
-                <li><Link to={`/edit-bucket/${bucketData.id}`}>Edit</Link></li>
+                <li><Link to={`/edit-bucket/${bucketData.id}`}>Edit Bucket</Link></li>
                 <li><Link type="submit" onClick={handledelete}>Delete</Link></li>
                 <li><Link to={`/new-pipe/${bucketData.id}`}>Add Pipes</Link></li>
-                <li><Link to={`/edit-pipe/${bucketData.id}`}>Edit Pipe</Link></li>
                 <li><Link to="/pipe-history/">Pipe History</Link></li>
                 
             </ul>

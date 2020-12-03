@@ -60,9 +60,9 @@ function App() {
           <PipeHistory />
         </Route>
 
-        {/* <Route path="/delete-pipe/:id">
+        <Route path="/delete-pipe/:id">
           <EditPipePage />
-        </Route> */}
+        </Route>
 
         <Route path="/edit-pipe/:id" >
           <EditPipePage convertDateTime={convertDateTime}/>

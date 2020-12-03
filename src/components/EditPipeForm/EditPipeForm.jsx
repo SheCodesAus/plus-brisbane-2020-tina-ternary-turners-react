@@ -9,6 +9,7 @@ function EditPipeForm() {
     const history = useHistory();
     const { id } = useParams();
 
+    const bucket_ID = window.localStorage.getItem("bucket_ID")
     // const [errorCode, setErrorCode] = useState(200); //this does not work!!
     var globalerror = 200;
 
@@ -70,7 +71,8 @@ function EditPipeForm() {
         .then((response) => {
             console.log(globalerror);
             if(globalerror===200){
-                history.push( `/pipes/${pipeDetails.id}`);
+                history.push( `/buckets/${bucket_ID}`);
+                // history.push( `/pipes/${pipeDetails.id}`);
             }
             else{
                 console.log(globalerror);
@@ -110,16 +112,13 @@ function EditPipeForm() {
             </div>
 
             <div class="form-item">
-                <label htmlFor="amount">Amount Value:</label>
-                <input type="number" id="amount" value={pipeDetails.amount}/>
+                <label htmlFor="amount_dollar">Amount Dolar:</label>
+                <input type="number" id="amount_dollar" value={pipeDetails.amount_dollar}/>
             </div>
 
             <div class="form-item">
-                <label for="type">Choose Dollar or Percent:</label>
-                <select id="type" name="type">
-                    <option value={"Dollar"}>dollar</option>
-                    <option value="Percent">percent</option>
-                </select>
+                <label htmlfor="amount_percent">Amount Percent:</label>
+                <input type="number" id="amount_percent" value={pipeDetails.amount_percent}/>
             </div>	
 
             <div class="form-item">
