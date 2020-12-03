@@ -109,7 +109,7 @@ return (
                 
                 return (
                     <li>
-                        <strong class= {chartLabel(key)}>{(pipeData.amount_percent==-1)?(pipeData.amount_dollar*100/bucketData.source_balance):(pipeData.amount_percent)}%</strong>
+                        <strong class= {chartLabel(key)}>{((pipeData.amount_percent==-1)?(pipeData.amount_dollar*100/bucketData.source_balance):(pipeData.amount_percent)).toFixed(2)}%</strong>
                         {/* <strong class="percent color0">{pipeData.amount_percent}%</strong> */}
                         <span class="choice">{pipeData.pipe_name}</span>
                     </li>
