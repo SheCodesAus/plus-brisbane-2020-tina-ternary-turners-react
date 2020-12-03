@@ -23,6 +23,18 @@ function EditPipeForm() {
         .then((data) => {
             console.log(data);
             setPipeDetails(data);
+            if(data.amount_dollar==-1){
+                var selection = document.getElementById("type") 
+                var amount =document.getElementById("amount")
+                selection.value = "Percent";
+                amount.valueAsNumber = data.amount_percent;
+            }
+            else{
+                var selection = document.getElementById("type") 
+                var amount =document.getElementById("amount")
+                selection.value = "Dollar";
+                amount.valueAsNumber = data.amount_dollar;
+            }
         })
         .catch((error) => {
             console.log(error)
@@ -67,6 +79,18 @@ function EditPipeForm() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        var selection = document.getElementById("type") 
+        var amount =document.getElementById("amount")
+        if (selection.value == "Dollar"){
+
+            pipeDetails.amount_dollar= amount.valueAsNumber;
+            pipeDetails.amount_percent= -1;
+        }
+        else
+        {
+            pipeDetails.amount_dollar= -1;
+            pipeDetails.amount_percent= amount.valueAsNumber;
+        }
         editData()
         .then((response) => {
             console.log(globalerror);
@@ -112,13 +136,16 @@ function EditPipeForm() {
             </div>
 
             <div class="form-item">
-                <label htmlFor="amount_dollar">Amount Dolar:</label>
-                <input type="number" id="amount_dollar" value={pipeDetails.amount_dollar}/>
+                <label htmlFor="amount">Amount Value:</label>
+                <input type="number" id="amount" placeholder="4"/>
             </div>
 
             <div class="form-item">
-                <label htmlfor="amount_percent">Amount Percent:</label>
-                <input type="number" id="amount_percent" value={pipeDetails.amount_percent}/>
+                <label for="type">Choose Dollar or Percent:</label>
+                <select id="type" name="type">
+                    <option value="Dollar">dollar</option>
+                    <option value="Percent">percent</option>
+                </select>
             </div>	
 
             <div class="form-item">
