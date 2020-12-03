@@ -53,19 +53,23 @@ function PipeCard(props) {
         }
     return (
         <div className="bucket-card">
-            <h4>pipe's name:{pipeData.pipe_name} BSB Numeber:{pipeData.dest_bsb_number}</h4>
-            <h4>Bank Account Numebr:{pipeData.dest_account_number} Bank Account Name:{pipeData.dest_account_name}</h4>
-            <h4>Bank Balance:{pipeData.dest_balance} </h4>
-            <h4>Statement Text:{pipeData.statement_text} Date Transfered:dd/mm/yy</h4>
-            <h4>Amount in dollar:{(pipeData.amount_dollar==-1)?(pipeData.amount_percent*bucketData.source_balance/100):(pipeData.amount_dollar)}$</h4>
-            <h4>Amount percent:{(pipeData.amount_percent==-1)?(pipeData.amount_dollar*100/bucketData.source_balance):(pipeData.amount_percent)}%</h4>
+            <h4>Pipe Name: {pipeData.pipe_name}</h4>
+            <h4>BSB Number: {pipeData.dest_bsb_number}</h4>
+            <h4>Bank Account Number: {pipeData.dest_account_number} </h4>
+            <h4>Bank Account Name: {pipeData.dest_account_name}</h4>
+            <h4>Bank Balance: ${pipeData.dest_balance} </h4>
+            <h4>Statement Text: {pipeData.statement_text} </h4>
+            <h4>Date Transferred: dd/mm/yy</h4>
+            <h4>Amount in dollar: ${(pipeData.amount_dollar==-1)?(pipeData.amount_percent*bucketData.source_balance/100):(pipeData.amount_dollar)}</h4>
+            <h4>Amount percent: {(pipeData.amount_percent==-1)?(pipeData.amount_dollar*100/bucketData.source_balance):(pipeData.amount_percent)}%</h4>
             <nav class="main-navigation">
-            <ul >
-                <li><Link type="submit" onClick={handledelete}>Delete Pipe</Link></li>
-            </ul>
             <ul >
                 <li><Link to={`/edit-pipe/${pipeData.id}`}>Edit Pipe</Link></li>
             </ul>
+            <ul >
+                <li><Link type="submit" onClick={handledelete}>Delete Pipe</Link></li>
+            </ul>
+
         </nav>
         </div>
     );
