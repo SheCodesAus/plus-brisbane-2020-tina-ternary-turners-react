@@ -94,10 +94,10 @@ return (
         <aside class="sidebar-left">
             <h2>{bucketData.title}</h2>
             <h3>This bucket has been created at: {convertDateTime(bucketData.date_created)}</h3>
-            <h3>BSB number:{bucketData.source_bsb_number} </h3>
-            <h3>Account number:{bucketData.source_account_number }</h3>
+            <h3>BSB number: {bucketData.source_bsb_number} </h3>
+            <h3>Account number: {bucketData.source_account_number }</h3>
             <h3>Account name: {bucketData.source_account_name }</h3>
-            <h3>Balace: {bucketData.source_balance}</h3>
+            <h3>Balace: ${bucketData.source_balance}</h3>
             <h3>Bucket Status is {(bucketData.is_open)?("Open"):("Closed")}</h3>
         </aside>
         <h3>This bucket has been split to </h3>
@@ -128,8 +128,8 @@ return (
         <nav class="main-navigation">
             <ul >
                 <li><Link to={`/edit-bucket/${bucketData.id}`}>Edit Bucket</Link></li>
-                <li><Link type="submit" onClick={handledelete}>Delete</Link></li>
                 <li><Link to={`/new-pipe/${bucketData.id}`}>Add Pipes</Link></li>
+                <li><Link type="submit" onClick={handledelete}>Delete Bucket</Link></li>
                 <li><Link to="/pipe-history/">Pipe History</Link></li>
                 
             </ul>

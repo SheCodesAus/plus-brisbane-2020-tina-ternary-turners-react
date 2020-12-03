@@ -43,9 +43,9 @@ function PipeHistory () {
             <td>{pipeData.dest_bsb_number}</td>
             <td>{pipeData.dest_account_number}</td>
             <td>{pipeData.dest_account_name}</td>
-            <td>{pipeData.dest_balance}</td>
+            <td>${pipeData.dest_balance}</td>
             <td>{pipeData.statement_text}</td>
-            <td>{(pipeData.amount_dollar==-1)?(pipeData.amount_percent*bucketData.source_balance/100):(pipeData.amount_dollar)}$</td>
+            <td>${(pipeData.amount_dollar==-1)?(pipeData.amount_percent*bucketData.source_balance/100):(pipeData.amount_dollar)}</td>
             <td>{(pipeData.amount_percent==-1)?(pipeData.amount_dollar*100/bucketData.source_balance):(pipeData.amount_percent)}%</td>
             <td>dd/mm/yy</td>
         </tr>

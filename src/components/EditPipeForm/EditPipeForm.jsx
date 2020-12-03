@@ -112,7 +112,7 @@ function EditPipeForm() {
             </div>
 
             <div class="form-item">
-                <label htmlFor="amount_dollar">Amount Dolar:</label>
+                <label htmlFor="amount_dollar">Amount Dollar:</label>
                 <input type="number" id="amount_dollar" value={pipeDetails.amount_dollar}/>
             </div>
 
