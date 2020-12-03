@@ -55,7 +55,7 @@ function PipeForm({ bucketId}) {
         if (NewpipeData.pipe_name && NewpipeData.dest_bsb_number) {
         var selection = document.getElementById("type") 
         var amount =document.getElementById("amount")
-        if (selection.value == "dollar"){
+        if (selection.value == "Dollar"){
 
                 NewpipeData.amount_dollar= amount.valueAsNumber;
                 NewpipeData.amount_percent= -1;

@@ -23,15 +23,15 @@ function PipeHistory () {
     {/* <img src={history} alt="pipe history image"/> */}
     <table style={{"width":"100%"}}>
     <tr>
-        <th>pipe's name</th>
-        <th>Numeber</th>
-        <th>Bank Account Numebr</th>
+        <th>Pipe Name</th>
+        <th>BSB Number</th>
+        <th>Bank Account Number</th>
         <th>Bank Account Name</th>
         <th>Bank Balance</th>
         <th>Statement Text</th>
-        <th>Amount in dolla</th>
+        <th>Amount in dollar</th>
         <th>Amount in percent</th>
-        <th>Date Transfered</th>
+        <th>Date Transferred</th>
     </tr>
     
     {bucketData.pipes.map((pipeData, key) => 
